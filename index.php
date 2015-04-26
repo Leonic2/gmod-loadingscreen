@@ -6,7 +6,7 @@ error_reporting(0);
 $r       = mt_rand(1,3);
 $plname  = 'Player';
 $map     = '';
-$avatar  = 'img/nouser.png';
+$avatar  = 'img/unknown.png';
 
 $authors = array(
     1 => 'FIRST SONG NAME',
@@ -18,7 +18,7 @@ $pictures = array(1,2,3);
 shuffle($pictures);
 
 if (isset($_GET['mapname']))
-    $map = '<br>You will play the map: '.$_GET['mapname'];
+    $map = '<br>You are connecting to: '.$_GET['mapname'];
 
 if (isset($_GET['steamid'])) {
     $data = 'http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?key=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX&steamids='.$_GET['steamid'];
